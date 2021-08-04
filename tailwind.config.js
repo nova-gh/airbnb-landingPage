@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter"],
+      },
       colors: {
         brand: "#FF385C",
         primeBlack: "#222222",
