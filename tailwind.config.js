@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         brand: "#FF385C",
         primeBlack: "#222222",
+        borderColor: "#DDDDDD ",
+        footerBg: "#F7F7F7",
       },
     },
   },
