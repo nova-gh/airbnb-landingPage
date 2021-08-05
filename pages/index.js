@@ -3,8 +3,10 @@ import Head from "next/head";
 import Header from "../components/Header";
 import HeroImg from "../components/HeroImg";
 import SmCard from "../components/SmCard";
+import MdCard from "../components/MdCard";
+import LgCard from "../components/LgCard";
 
-export default function Home({ exploreData, liveAnywhere }) {
+export default function Home({ exploreData, liveAnywhereData, discoverData }) {
   // console.log(liveAnywhere);
   return (
     <div className="">
@@ -40,7 +42,18 @@ export default function Home({ exploreData, liveAnywhere }) {
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Live anywhere
           </h2>
-          {/* work here */}
+          <div className="flex px-3 my-4 -mx-3 space-x-3 overflow-scroll scrollbar-hide">
+            {liveAnywhereData.map((item, index) => (
+              <MdCard img={item.img} title={item.title} key={index} />
+            ))}
+          </div>
+          <LgCard
+            img="https://rebrand.ly/ceviumj"
+            title="The Greatest Outdoors"
+            alt="bannerImg"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get Inspired"
+          />
         </section>
         {/*Discover Experiences section  */}
         <section className="mb-10">
@@ -50,6 +63,17 @@ export default function Home({ exploreData, liveAnywhere }) {
           <p className="text-sm md:text-xl lg:text-2xl xl:text-3xl">
             Unique activities with local experts – in person or online.
           </p>
+          <div className="flex px-3 my-4 -mx-3 space-x-3 ">
+            {discoverData.map((item, index) => (
+              <MdCard
+                img={item.img}
+                title={item.title}
+                key={index}
+                description={item.description}
+                buttonText={item.buttonText}
+              />
+            ))}
+          </div>
         </section>
       </main>
     </div>
@@ -64,8 +88,15 @@ export const getStaticProps = async (ctx) => {
     };
   }
   const resLive = await fetch("https://rebrand.ly/61d709");
-  const liveAnywhere = await resLive.json();
-  if (!liveAnywhere) {
+  const liveAnywhereData = await resLive.json();
+  if (!liveAnywhereData) {
+    return {
+      notFound: true,
+    };
+  }
+  const resDiscover = await fetch("https://rebrand.ly/9lp0ux1");
+  const discoverData = await resDiscover.json();
+  if (!discoverData) {
     return {
       notFound: true,
     };
@@ -73,7 +104,8 @@ export const getStaticProps = async (ctx) => {
   return {
     props: {
       exploreData,
-      liveAnywhere,
+      liveAnywhereData,
+      discoverData,
     },
   };
 };
