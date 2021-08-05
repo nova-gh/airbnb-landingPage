@@ -19,6 +19,7 @@ export default function Home({ exploreData, liveAnywhere }) {
       <HeroImg />
       {/* Content*/}
       <main className="px-8 mx-auto mt-16 max-w-7xl sm:px-16 text-primeBlack">
+        {/* Explore Nearby Section */}
         <section className="mb-10">
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Explore nearby
@@ -34,11 +35,13 @@ export default function Home({ exploreData, liveAnywhere }) {
             ))}
           </div>
         </section>
+        {/* Live anywhere section */}
         <section className="mb-10">
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Live anywhere
           </h2>
         </section>
+        {/*Discover Experiences section  */}
         <section className="mb-10">
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Discover Experiences
