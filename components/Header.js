@@ -21,7 +21,7 @@ const Header = () => {
       {/* right */}
       <div className="flex items-center ml-auto space-x-4 text-primeBlack">
         <Link href="/">
-          <a className="hidden md:inline">Become a host</a>
+          <a className="hidden lg:inline">Become a host</a>
         </Link>
         <FiGlobe className="text-lg cursor-pointer" />
         <div className="flex items-center p-2 space-x-2 border-2 rounded-full shadow-sm cursor-pointer hover:shadow-md">
