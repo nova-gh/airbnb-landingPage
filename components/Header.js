@@ -19,7 +19,7 @@ const Header = () => {
         <FaSearch className="hidden p-2 text-3xl text-white rounded-full cursor-pointer md:inline bg-brand" />
       </div>
       {/* right */}
-      <div className="flex items-center ml-auto space-x-4 text-primeBlack">
+      <div className="items-center hidden ml-auto space-x-4 lg:flex text-primeBlack">
         <Link href="/">
           <a className="hidden lg:inline">Become a host</a>
         </Link>
