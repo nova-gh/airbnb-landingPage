@@ -5,6 +5,7 @@ import HeroImg from "../components/HeroImg";
 import SmCard from "../components/SmCard";
 import MdCard from "../components/MdCard";
 import LgBanner from "../components/LgBanner";
+import LgCard from "../components/LgCard";
 
 export default function Home({ exploreData, liveAnywhereData, discoverData }) {
   // console.log(liveAnywhere);
@@ -52,7 +53,10 @@ export default function Home({ exploreData, liveAnywhereData, discoverData }) {
             title="The Greatest Outdoors"
             alt="bannerImg"
             description="Wishlists curated by Airbnb."
+            textColor="text-primeBlack"
             buttonText="Get Inspired"
+            buttonTextColor="text-white"
+            buttonColor="bg-gray-900"
           />
         </section>
         {/*Discover Experiences section  */}
@@ -63,9 +67,9 @@ export default function Home({ exploreData, liveAnywhereData, discoverData }) {
           <p className="text-sm md:text-xl lg:text-2xl xl:text-3xl">
             Unique activities with local experts – in person or online.
           </p>
-          <div className="flex px-3 my-4 -mx-3 space-x-3 ">
+          <div className="flex justify-between pl-3 my-4 -ml-3 space-x-3 overflow-scroll scrollbar-hide">
             {discoverData.map((item, index) => (
-              <MdCard
+              <LgCard
                 img={item.img}
                 title={item.title}
                 key={index}
@@ -74,6 +78,16 @@ export default function Home({ exploreData, liveAnywhereData, discoverData }) {
               />
             ))}
           </div>
+          <LgBanner
+            img="https://rebrand.ly/bcc30ga"
+            title="Try hosting"
+            alt="bannerImg"
+            description="Earn extra income and unlock new opportunites by sharing your space."
+            textColor="text-white"
+            buttonText="Learn more"
+            buttonTextColor="text-primeBlack"
+            buttonColor="bg-white"
+          />
         </section>
       </main>
     </div>
