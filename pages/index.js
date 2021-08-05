@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import HeroImg from "../components/HeroImg";
 import SmCard from "../components/SmCard";
 import MdCard from "../components/MdCard";
-import LgCard from "../components/LgCard";
+import LgBanner from "../components/LgBanner";
 
 export default function Home({ exploreData, liveAnywhereData, discoverData }) {
   // console.log(liveAnywhere);
@@ -42,12 +42,12 @@ export default function Home({ exploreData, liveAnywhereData, discoverData }) {
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Live anywhere
           </h2>
-          <div className="flex px-3 my-4 -mx-3 space-x-3 overflow-scroll scrollbar-hide">
+          <div className="flex pl-3 my-4 -ml-3 space-x-3 overflow-scroll scrollbar-hide">
             {liveAnywhereData.map((item, index) => (
               <MdCard img={item.img} title={item.title} key={index} />
             ))}
           </div>
-          <LgCard
+          <LgBanner
             img="https://rebrand.ly/ceviumj"
             title="The Greatest Outdoors"
             alt="bannerImg"
