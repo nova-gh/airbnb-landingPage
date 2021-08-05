@@ -10,16 +10,16 @@ const Header = () => {
         <h1 className="text-xl font-bold">airbnb</h1>
       </div>
       {/* middle */}
-      <div className="flex items-center p-2 transition duration-100 ease-in-out delay-100 rounded-full md:shadow-sm md:border-2 md:hover:shadow-md">
+      <div className="grid items-center grid-cols-4 p-2 transition duration-100 ease-in-out delay-100 rounded-full md:shadow-sm md:border-2 md:hover:shadow-md">
         <input
           type="text"
           placeholder="Start your search"
-          className="flex-grow pl-5 font-medium bg-transparent outline-none text-primeBlack placeholder-primeBlack"
+          className="col-span-3 pl-5 font-medium bg-transparent outline-none text-primeBlack placeholder-primeBlack"
         />
-        <FaSearch className="hidden p-2 text-3xl text-white rounded-full cursor-pointer md:inline bg-brand" />
+        <FaSearch className="col-span-1 p-2 text-3xl text-white rounded-full cursor-pointer place-self-end bg-brand" />
       </div>
       {/* right */}
-      <div className="items-center hidden ml-auto space-x-4 lg:flex text-primeBlack">
+      <div className="items-center hidden ml-auto space-x-4 md:flex text-primeBlack">
         <Link href="/">
           <a className="hidden lg:inline">Become a host</a>
         </Link>
