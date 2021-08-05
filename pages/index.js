@@ -40,6 +40,7 @@ export default function Home({ exploreData, liveAnywhere }) {
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl xl:text-4xl">
             Live anywhere
           </h2>
+          {/* work here */}
         </section>
         {/*Discover Experiences section  */}
         <section className="mb-10">
