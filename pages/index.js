@@ -6,6 +6,7 @@ import SmCard from "../components/SmCard";
 import MdCard from "../components/MdCard";
 import LgBanner from "../components/LgBanner";
 import LgCard from "../components/LgCard";
+import Footer from "../components/Footer";
 
 export default function Home({ exploreData, liveAnywhereData, discoverData }) {
   // console.log(liveAnywhere);
@@ -90,6 +91,7 @@ export default function Home({ exploreData, liveAnywhereData, discoverData }) {
           />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
