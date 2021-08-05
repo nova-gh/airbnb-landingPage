@@ -10,7 +10,7 @@ const Header = () => {
         <h1 className="text-xl font-bold">airbnb</h1>
       </div>
       {/* middle */}
-      <div className="grid items-center grid-cols-4 p-2 transition duration-100 ease-in-out delay-100 rounded-full md:shadow-sm md:border-2 md:hover:shadow-md">
+      <div className="grid items-center grid-cols-4 col-span-2 p-2 transition duration-100 ease-in-out delay-100 rounded-full md:col-span-1 md:shadow-sm md:border-2 md:hover:shadow-md">
         <input
           type="text"
           placeholder="Start your search"
