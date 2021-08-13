@@ -23,7 +23,7 @@
 
 ### Links
 
-- Live Site URL: [Vercel App](https://ng-airbnb.vercel.app)
+- Live Site URL: [Demo App](https://ng-airbnb.vercel.app)
 
 ## My process
 
